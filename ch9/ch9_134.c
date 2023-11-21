@@ -3,5 +3,7 @@
 #include <string.h>
 void len(char *arr)
 {
-    sizeof(arr)
+    char *begin = arr;
+    char *end = *(&arr + 1);
+    printf("%d\n", end - begin);
 }
