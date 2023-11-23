@@ -1,4 +1,6 @@
 #include<stdio.h>
+// how to use array in function
+
 void print_matrix(int array[][4], int row, int col){
     for(int i = 0; i<row; i++){
         for(int j = 0; j<col; j++){

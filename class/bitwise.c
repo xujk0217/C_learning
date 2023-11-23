@@ -1,4 +1,5 @@
 #include <stdio.h>
+//bitwise 0 1, use a char to display eight bool
 
 //AND-0 : reset (=0) : &
 //OR-1  : set   (=1) : |

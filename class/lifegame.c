@@ -1,4 +1,5 @@
 #include <stdio.h>
+//display how to search neighbor in array^2
 
 int main(){
 

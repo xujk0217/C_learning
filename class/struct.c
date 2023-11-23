@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stddef.h>
 #include <string.h>
-
+// struct learning
 struct student    
     {
         char name[20];                     //      20
@@ -41,5 +41,5 @@ int main(){
     john.id = 3232323;
     printf("john's new id : %d\n", john.id); 
 
-    
+
 }

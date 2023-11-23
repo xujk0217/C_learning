@@ -1,4 +1,5 @@
 #include<stdio.h>
+// swift bitwise
 int test (int j, int m){
     j++;                      //0110
     m+=2;                     //1001
