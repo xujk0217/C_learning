@@ -13,13 +13,13 @@ void floodFill(int **image, int imageSize, int sr, int sc, int newColor)
         {
             for (int j = 0; j < imageSize; j++)
             {
-                if (image[i][j] = -1)
+                if (image[i][j] == -1)
                 {
                     for (int di = -1; di < 2; di++)
                     {
                         for (int dj = -1; dj < 2; dj++)
                         {
-                            if ((i + di) >= 0 && (j + dj) >= 0 && (i + di) < imageSize && (i + di) < imageSize)
+                            if ((i + di) >= 0 && (j + dj) >= 0 && (i + di) < imageSize && (i + di) < imageSize &&((di == 0)||(dj == 0)))
                             {
                                 if (image[i + di][j + dj] == a)
                                 {

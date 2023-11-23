@@ -1,6 +1,8 @@
 #include <stdio.h>
+#include <stddef.h>
+#include <string.h>
 
-struct student
+struct student    
     {
         char name[20];                     //      20
         int id;                            //       4
@@ -10,9 +12,34 @@ struct student
     };
 
 int main(){
-    struct student john = {"John Smith", 910351, "0970332000", {97, 87, 90, 89}, };
+    struct student john = {"John Smith", 910351, "886-970332000", {97, 87, 90, 89}, 2004, 11, 23};
+    john.id = 232333;
 
-    printf("%lu\n", sizeof(john));
-    printf("%lu\n", sizeof(struct student));
+    printf("name : %s\n", john.name);
+    printf("id : %d\n", john.id);
+    printf("phone_number : %s\n", john.phone);
+    printf("grade : ");
+    for(int i = 0; i < 4; i++){
+        printf("%.0f", john.grade[i]);
+        if(i!=3){
+            printf(", ");
+        }
+    }
+    printf("\n");
+    printf("birthday : %d/%d/%d\n", john.birth_year, john.birth_month, john.birth_day);
+
+    printf("\njohn's size : %lu\n", sizeof(john));
+    printf("student's size : %lu\n", sizeof(struct student));
+    
+
+    printf("start to id : %lu\n", offsetof(struct student, id));
+    printf("start to grade : %lu\n", offsetof(struct student, grade));
+
+
+    strcpy(john.name, "john happy");
+    printf("john's new name : %s\n", john.name);   
+    john.id = 3232323;
+    printf("john's new id : %d\n", john.id); 
+
     
 }

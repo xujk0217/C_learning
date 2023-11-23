@@ -3,7 +3,9 @@
 #include <string.h>
 void len(char *arr)
 {
-    char *begin = arr;
-    char *end = *(&arr + 1);
-    printf("%d\n", end - begin);
+    char str[60];
+    for(int i = 0; i <60; i++, arr++){
+        str[i] = *arr;
+    }
+    printf("%d", strlen(str));
 }
