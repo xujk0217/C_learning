@@ -4,10 +4,10 @@
 // struct learning
 struct student    
     {
-        char name[20];                     //      20
-        int id;                            //       4
-        char phone[14];                    //      14 (+2)
-        float grade[4];                    //      16
+        char name[20];                         //  20         檔案大小
+        int id;                                //  04  
+        char phone[14];                        //  14 (+2)    要到 4 的倍數  alignment
+        float grade[4];                        //  16
         int birth_year, birth_month, birth_day;//  12
     };
 
@@ -25,6 +25,7 @@ int main(){
             printf(", ");
         }
     }
+
     printf("\n");
     printf("birthday : %d/%d/%d\n", john.birth_year, john.birth_month, john.birth_day);
 
