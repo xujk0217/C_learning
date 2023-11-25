@@ -24,9 +24,10 @@ Complex *add_complex(Complex* aptr, Complex* bptr){
     (*c).imag = (*aptr).imag + (*bptr).imag;
     return c;
 }
+
 void mul_complex(const Complex a, Complex b, Complex *c){
-    (*c).real =( a.real * b.real )- ( a.imag * b.imag);
-    (*c).imag =( a.real * b.imag )+ ( a.imag * b.real);
+    (*c).real =( a.real * b.real ) - ( a.imag * b.imag);
+    (*c).imag =( a.real * b.imag ) + ( a.imag * b.real);
 }
 
 void print_complex(Complex a){
