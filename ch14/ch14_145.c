@@ -61,6 +61,7 @@ struct ListNode *oddEvenList(struct ListNode *head)
     // 返回新的鏈表頭
     return newHead;
 }
+
     void Construct(struct ListNode * node, int length, int num)
     {
         int a;
@@ -76,6 +77,7 @@ struct ListNode *oddEvenList(struct ListNode *head)
         num++;
         Construct(node->next, length, num);
     }
+
 
     int main()
     {

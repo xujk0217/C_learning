@@ -46,7 +46,9 @@ void readNumberComputeOnes(NumberSet *numberset){
         numberset->count++;
     }
     //while(scanf("%d", &(numberset->numbers[numberset->count].value))!= EOF){
-    /*while(scanf("%d", &(ptr->value))!=EOF){
+    /*
+    while(scanf("%d", &(ptr->value))!=EOF){
+        scanf...
         ptr++;
         numberset->count++;
     }
@@ -58,9 +60,23 @@ void printNumberSet(NumberSet *numberset){
     }
     printf("\n");
     for(int i = 0; i < 15; i++){
-        printf("%d ", numberset->numbers[i].bit);
-        if(i>=8){
+        if(numberset->numbers[i].value > 9){
             printf(" ");
+        }
+        printf("%d ", numberset->numbers[i].bit);
+    }
+}
+
+void sortNumberSet(NumberSet *numberset){
+    for(int i = numberset->count-2; i >= 0; i--){
+        for(int j = 0; j <= i; j++){
+            Number *ptr0 = &(numberset->numbers[j]);
+            Number *ptr1 = &(numberset->numbers[j+1]);
+            if((ptr0->bit < ptr1->bit)||((ptr0->bit == ptr1->bit)&&(ptr0->value < ptr1->value))){
+                Number temp = *ptr0;
+                *ptr0 = *ptr1;
+                *ptr1 = temp;
+            }
         }
     }
 }
@@ -68,5 +84,6 @@ void printNumberSet(NumberSet *numberset){
 int main(){
     NumberSet numberset;
     readNumberComputeOnes(&numberset);
+    sortNumberSet(&numberset);
     printNumberSet(&numberset);
 }
