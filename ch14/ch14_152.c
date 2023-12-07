@@ -26,7 +26,7 @@ int main(){
         printf("不可相加");
     }else{
         for(int i = 0; i < suma; i++){
-            A.
+            //A.
         }
     }
 
