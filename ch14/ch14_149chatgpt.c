@@ -17,7 +17,7 @@ int main()
     {
         long int n, k;
         scanf("%ld%ld", &n, &k);
-        
+
         struct data *address = NULL;
         struct data *rec = NULL;
 
@@ -48,14 +48,25 @@ int main()
 
         while (eaten < k)
         {
-            time += 5;
+            time += 1;
             recCope = address; // 每次迭代重置到列表的开头
-
+            int ti = 0;
             for (int i = 0; i < n; i++)
             {
                 if (time >= recCope->time && time % recCope->time == 0)
                 {
                     printf("%d %s\n", time, recCope->med);
+                    /*
+                    if (ti == 0)
+                    {
+                        printf("");
+                        ti++;
+                    }
+                    else
+                    {
+                        printf("\n");
+                    }
+                    */
                     eaten += 1;
                     if (eaten == k)
                     {
@@ -73,6 +84,10 @@ int main()
             struct data *temp = recCope;
             recCope = recCope->next;
             free(temp);
+        }
+        if (i != t - 1)
+        {
+           // printf("\n");
         }
     }
 
