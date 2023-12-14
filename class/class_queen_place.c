@@ -9,7 +9,8 @@ int abs(int i){
 void place_queen(int i, int queen_pos[QUEENS]){
     if(i == QUEENS){                       //stop
         for(int j = 0; j < QUEENS; j++){
-                printf("%d ", queen_pos[j]);
+            
+            printf("%d ", queen_pos[j]);
         }
         printf("\n");
 ;         return;
