@@ -26,6 +26,11 @@ int main()
         struct pair *myData = (struct pair *)malloc(95 * sizeof(struct pair));
         if (flag != 0)
             printf("\n");
+        for (int i = 0; i < 95; i++)
+        {
+            myData[i].frequency = 0;
+            myData[i].charASCII = 0;
+        }
         int b = 0;
         flag++;
         for (int i = 0; i < strlen(str); i++)
@@ -93,7 +98,5 @@ int main()
         str[128] = NULL;
         free(myData);
     }
-    printf("\n");
-    printf("\n");
     return 0;
 }
