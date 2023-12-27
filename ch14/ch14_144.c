@@ -10,7 +10,7 @@ struct ListNode
 };
  
 int getDecimalValue(struct ListNode* head);
- 
+
 int getDecimalValue(struct ListNode* head)
 {
     int sum = 0;

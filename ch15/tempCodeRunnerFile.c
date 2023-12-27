@@ -1,4 +1,3 @@
-#include <stdio.h>
 
 int moneyPerm(int K){
   if(K == 0 || K == 1){
@@ -9,10 +8,3 @@ int moneyPerm(int K){
   }
   return moneyPerm(K-1) +moneyPerm(K-5)+ moneyPerm(K-10);
 } 
-
-int main(){
-  int money;
-  scanf("%d", &money);
-  printf("%d", moneyPerm(money));
-  return 0;
-}
